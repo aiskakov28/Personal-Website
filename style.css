@@ -654,3 +654,14 @@ footer {
     padding-top: 1rem;
     border-top: 1px solid #555;
 }
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 5%;
+    }
+}
+.btn {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
