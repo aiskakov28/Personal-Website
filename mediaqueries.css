@@ -1,0 +1,188 @@
+/* mediaqueries.css */
+@media (max-width: 1024px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .section-text {
+        align-items: center;
+    }
+    .btn-container {
+        justify-content: center;
+    }
+    .socials-container {
+        justify-content: center;
+    }
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-pic {
+        margin-bottom: 2rem;
+    }
+    .about-content {
+        text-align: center;
+    }
+    .about-boxes {
+        flex-direction: column;
+    }
+    #skillCanvas {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    .profile-pic {
+        flex: 0 0 350px;
+        height: 350px;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .section-text-p1 {
+        font-size: 1.5rem;
+    }
+    .section-text-p2 {
+        font-size: 1.2rem;
+    }
+    .about-pic {
+        flex: 0 0 250px;
+        height: 250px;
+    }
+    #skillCanvas {
+        height: 150px;
+    }
+    .carousel-container {
+        max-width: 450px;
+        height: 225px;
+    }
+    .carousel-item {
+        height: 225px;
+    }
+    .techstack-subtitle {
+        font-size: 1.75rem;
+    }
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.5rem;
+    }
+    .tech-item {
+        padding: 0.6rem;
+    }
+    .tech-item h3 {
+        font-size: 0.9rem;
+    }
+    .tech-item p {
+        font-size: 0.7rem;
+    }
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        flex: 0 0 250px;
+        height: 250px;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    .about-box {
+        padding: 1rem;
+    }
+    .about-box h3 {
+        font-size: 1rem;
+    }
+    .about-box p {
+        font-size: 0.9rem;
+    }
+    #skillCanvas {
+        height: 100px;
+    }
+    .carousel-container {
+        max-width: 300px;
+        height: 150px;
+    }
+    .carousel-item {
+        height: 150px;
+    }
+    .techstack-subtitle {
+        font-size: 1.5rem;
+    }
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tech-item {
+        padding: 0.5rem;
+    }
+    .tech-item h3 {
+        font-size: 0.8rem;
+    }
+    .tech-item p {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-front i {
+        font-size: 3rem;
+    }
+
+    .card-front p, .card-back a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

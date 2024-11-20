@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abylay Iskakov - Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo" id="logo" onclick="scrollToHome()">Abylay Iskakov</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#profile">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#techstack">TechStack</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+    <div class="logo" onclick="scrollToHome()">Abylay Iskakov</div>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#techstack" onclick="toggleMenu()">TechStack</a></li>
+            <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+    </div>
+</nav>
+
+    <section id="profile">
+        <div class="profile-container">
+            <div class="profile-pic">
+                <img src="../assets/1729381768214.jpeg" alt="Abylay Iskakov">
+            </div>
+            <div class="data-visualization" id="dataVisualization"></div>
+            <div class="section-text">
+                <p class="section-text-p1">Hello, I'm</p>
+                <h1 class="title">Abylay Iskakov</h1>
+                <p class="section-text-p2">Data Scientist with 3 Years of Experience</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('../assets/Abylay Iskakov Resume (10).pdf')">
+                        Download Resume
+                    </button>
+                    <button class="btn btn-color-1" onclick="location.href='#contact'">
+                        Contact Info
+                    </button>
+                </div>
+                <div class="socials-container">
+                    <img src="../assets/linkedin.png" alt="LinkedIn" class="icon" onclick="window.open('https://www.linkedin.com/in/abylay-iskakov')">
+                    <img src="../assets/github-logo.png" alt="GitHub" class="icon" onclick="window.open('https://github.com/aiskakov28')">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <p class="section-text-p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="about-container">
+            <div class="about-pic">
+                <img src="../assets/pfp_2.jpg" alt="Abylay Iskakov">
+            </div>
+            <div class="about-content">
+                <div class="about-boxes">
+                    <div class="about-box">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                        <p>University of Rochester:</p>
+                        <p><b>B.S. Data Science | B.S. Mathematics & Statistics</b></p>
+                    </div>
+                    <div class="about-box">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Experience</h3>
+                        <p><b>3 years in data science:</b>
+                        <br>Learning skills & creating interesting projects</p>
+                        <p><b>6 months in front-end development:</b>
+                        <br>This website is developed by myself :)</p>
+                    </div>
+                </div>
+                <div class="about-boxes">
+                    <div class="about-box">
+                        <i class="fas fa-user"></i>
+                        <h3>Introducing myself...</h3>
+                        <p>Greetings, fellows! Armed with 3 years of experience in the data trenches, I spend my days coaxing insights from stubborn datasets and my nights wondering if our reality is just an elaborate statistical model. When I'm not crafting machine learning models so smart they finish my sentences, you might catch me performing salsa to explain p-values, outrunning my algorithm's Big O notation on long-distance jogs, or meditating in nature to achieve one-ness with the central limit theorem. Warning: Prolonged exposure may result in an irresistible urge to classify everything in your life, including your sock drawer, using k-means clustering!</p>
+                    </div>
+                    <div class="about-box">
+                        <i class="fas fa-heart"></i>
+                        <h3>Hobbies</h3>
+                        <p>Long distance running
+                        <br>Dancing salsa
+                        <br>Meditating in nature
+                        <br>Reading philosophy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="techstack">
+        <p class="section-text-p1">Explore My</p>
+        <h1 class="title">TechStack</h1>
+        <div class="techstack-details-container">
+            <div class="about-containers">
+                <div class="details-containers">
+                    <h2 class="techstack-subtitle">Programming Languages</h2>
+                    <div class="carousel-container">
+                        <button class="carousel-arrow left-arrow" aria-label="Previous image"><</button>
+                        <div class="carousel">
+                            <img src="../assets/python-logo.png" alt="Python" class="carousel-item">
+                            <img src="../assets/r-logo.png" alt="R" class="carousel-item">
+                            <img src="../assets/sql-logo.png" alt="SQL" class="carousel-item">
+                            <img src="../assets/java-logo.svg" alt="Java" class="carousel-item">
+                            <img src="../assets/html-logo.png" alt="HTML" class="carousel-item">
+                            <img src="../assets/css-logo.png" alt="CSS" class="carousel-item">
+                            <img src="../assets/javascript-logo.png" alt="JavaScript" class="carousel-item">
+                        </div>
+                        <button class="carousel-arrow right-arrow" aria-label="Next image">></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h2 class="techstack-subtitle">Machine Learning & Statistical Analysis</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <h3>Machine Learning</h3>
+                        <p>Classification
+                            <br>Clustering
+                            <br>Dimensionality reduction</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Statistics</h3>
+                        <p>Hypothesis testing
+                            <br> Correlation analysis
+                            <br>Regression
+                            <br>ARIMA</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Scikit-Learn</h3>
+                        <p>RandomForestClassifier
+                            <br>GradientBoostingClassifier
+                            <br> SVC
+                            <br>MLPC </p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>NLP</h3>
+                        <p>TF-IDF
+                            <br>Cosine similarity</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Boosting Algorithms</h3>
+                        <p>GradientBoosting
+                            <br>XGBoost</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h2 class="techstack-subtitle">Data Manipulation & Visualization</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <h3>Data Manipulation</h3>
+                        <p>Pandas
+                            <br>Numpy</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Feature Engineering (Finance)</h3>
+                        <p>RSI
+                            <br>MACD
+                            <br>Bollinger Bands</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Data Visualization Tools</h3>
+                        <p>Tableau
+                            <br>Matplotlib
+                            <br>Seaborn
+                            <br>Plotly
+                            <br>Dash</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h2 class="techstack-subtitle">Big Data & Cloud Technologies</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <h3>Big Data Technologies</h3>
+                        <p>Spark</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Databases</h3>
+                        <p>MySQL</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Cloud Platforms</h3>
+                        <p>AWS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+    <p class="section-text-p1">Check Out My</p>
+    <h1 class="title">Portfolio</h1>
+    <div class="project-container">
+    <div class="project-card animate-project">
+        <img src="../assets/GOOG_binary_direction.png" alt="Predicting Binary Direction of Stock Price" class="project-img">
+        <h3 class="project-title">Predicting Binary Direction of $GOOG Stock Price</h3>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/aiskakov28')">
+                Github
+            </button>
+            <button class="btn btn-color-1" onclick="window.open('https://yourlivedemo.com/project1')">
+                Live Demo
+            </button>
+        </div>
+    </div>
+    <div class="project-card animate-project">
+        <img src="../assets/Occupancy_prediction.png" alt="Occupancy Prediction Model" class="project-img">
+        <h3 class="project-title">Occupancy Level Prediction Model based on Historical Attendance</h3>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/aiskakov28')">
+                Github
+            </button>
+            <button class="btn btn-color-1" onclick="window.open('https://yourlivedemo.com/project2')">
+                Live Demo
+            </button>
+        </div>
+    </div>
+    <div class="project-card animate-project">
+        <img src="../assets/financial_health_dashboard.png" alt="Company's Financial Health Assessment Dashboard" class="project-img">
+        <h3 class="project-title">Company's Financial Health Assessment Dashboard</h3>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/aiskakov28')">
+                Github
+            </button>
+            <button class="btn btn-color-1" onclick="window.open('https://yourlivedemo.com/project3')">
+                Live Demo
+            </button>
+        </div>
+    </div>
+    <div class="project-card animate-project">
+        <img src="../assets/matching_network.png" alt="Machine Learning-Based Pairing Algorithm" class="project-img">
+        <h3 class="project-title">Machine Learning-Based Pairing Algorithm</h3>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/aiskakov28')">
+                Github
+            </button>
+            <button class="btn btn-color-1" onclick="window.open('https://yourlivedemo.com/project4')">
+                Live Demo
+            </button>
+        </div>
+    </div>
+    <div class="project-card animate-project">
+        <img src="../assets/CampusLens.png" alt="CampusLens" class="project-img">
+        <h3 class="project-title">Computer Vision for Fraud Detection in Financial Transactions </h3>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/aiskakov28')">
+                Github
+            </button>
+            <button class="btn btn-color-1" onclick="window.open('https://yourlivedemo.com/project5')">
+                Live Demo
+            </button>
+        </div>
+    </div>
+    <div class="project-card animate-project">
+        <img src="../assets/sent-analysis-market-share.png" alt="Natural Language Processing for Financial News Sentiment Analysis" class="project-img">
+        <h3 class="project-title">Natural Language Processing for Financial News Sentiment Analysis</h3>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/aiskakov28')">
+                Github
+            </button>
+            <button class="btn btn-color-1" onclick="window.open('https://yourlivedemo.com/project6')">
+                Live Demo
+            </button>
+        </div>
+    </div>
+</div>
+</section>
+    <section id="contact">
+    <p class="section-text-p1">Get In Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="card-front">
+                <i class="fas fa-envelope"></i>
+                <p>Email</p>
+            </div>
+            <div class="card-back">
+                <a href="mailto:aiskakov@u.rochester.edu">aiskakov@u.rochester.edu</a>
+            </div>
+        </div>
+        <div class="contact-card">
+            <div class="card-front">
+                <i class="fab fa-linkedin"></i>
+                <p>LinkedIn</p>
+            </div>
+            <div class="card-back">
+                <a href="https://www.linkedin.com/in/abylay-iskakov" target="_blank">linkedin.com/in/abylay-iskakov</a>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Abylay Iskakov</h3>
+            <p>Data Scientist with a passion for turning data into insights, and a strong commitment to continuous learning.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#profile">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#techstack">TechStack</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Connect With Me</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/abylay-iskakov" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/aiskakov28" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="mailto:aiskakov@u.rochester.edu" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Abylay Iskakov. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
