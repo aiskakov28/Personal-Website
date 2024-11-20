@@ -36,10 +36,12 @@ To run this website locally:
 Clone the repository to your local machine.
 Open the index.html file in a web browser.
 No additional setup or dependencies are required as this is a static website.
+or take a look at abylay-iskakov.com   ;)
 
 **Future Enhancements:**
 Implement a dark mode toggle
 Add a blog section with dynamic content loading
 Integrate a backend for handling contact form submissions
 Enhance accessibility features
+
 This project demonstrates a range of front-end development skills, including HTML5, CSS3, JavaScript, and the integration of third-party libraries like Three.js for advanced visualizations.
