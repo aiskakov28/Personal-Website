@@ -31,6 +31,7 @@ Efficient JavaScript code, including the use of requestAnimationFrame for smooth
 └── assets/
     └── (various image files)
 ​
+---
 **Setup and Usage:**
 To run this website locally:
 Clone the repository to your local machine.
