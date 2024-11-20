@@ -1,4 +1,5 @@
 // script.js
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -44,7 +45,6 @@ window.addEventListener('scroll', () => {
             current = section.getAttribute('id');
         }
     });
-
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
@@ -57,7 +57,6 @@ window.addEventListener('scroll', () => {
 function highlightActiveSection() {
     const sections = document.querySelectorAll('section');
     const menuLinks = document.querySelectorAll('.menu-links a');
-
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
@@ -67,7 +66,6 @@ function highlightActiveSection() {
                 current = section.getAttribute('id');
             }
         });
-
         menuLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href').slice(1) === current) {
@@ -87,27 +85,24 @@ function init() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(450, 450);
+    const containerWidth = document.getElementById('dataVisualization').clientWidth;
+    const containerHeight = Math.min(450, containerWidth);
+    renderer.setSize(containerWidth, containerHeight);
     document.getElementById('dataVisualization').appendChild(renderer.domElement);
 
     const geometry = new THREE.BufferGeometry();
     const vertices = [];
-
     for (let i = 0; i < 1000; i++) {
         const x = Math.random() * 2 - 1;
         const y = Math.random() * 2 - 1;
         const z = Math.random() * 2 - 1;
         vertices.push(x, y, z);
     }
-
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-
     const material = new THREE.PointsMaterial({ color: 0x4a90e2, size: 0.02 });
     particles = new THREE.Points(geometry, material);
     scene.add(particles);
-
     camera.position.z = 2;
-
     animate();
 }
 
@@ -121,9 +116,11 @@ function animate() {
 init();
 
 window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    const containerWidth = document.getElementById('dataVisualization').clientWidth;
+    const containerHeight = Math.min(450, containerWidth);
+    camera.aspect = containerWidth / containerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(450, 450);
+    renderer.setSize(containerWidth, containerHeight);
 });
 
 // Carousel functionality
@@ -197,12 +194,10 @@ window.addEventListener('load', animateTechItems);
 // Add hover effect to tech items
 function addTechItemInteractivity() {
     const techItems = document.querySelectorAll('.tech-item');
-
     techItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             item.style.transform = 'translateY(-5px) scale(1.05)';
         });
-
         item.addEventListener('mouseleave', () => {
             item.style.transform = 'translateY(0) scale(1)';
         });
