@@ -226,3 +226,24 @@ function animateProjects() {
 
 // Call the function when the page loads
 window.addEventListener('load', animateProjects);
+
+// Add touch event handlers for contact cards
+document.querySelectorAll('.contact-card').forEach(card => {
+    card.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        const frontCard = this.querySelector('.card-front');
+        const backCard = this.querySelector('.card-back');
+
+        frontCard.style.transform = 'rotateY(180deg)';
+        backCard.style.transform = 'rotateY(0deg)';
+    });
+
+    card.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        const frontCard = this.querySelector('.card-front');
+        const backCard = this.querySelector('.card-back');
+
+        frontCard.style.transform = 'rotateY(0deg)';
+        backCard.style.transform = 'rotateY(180deg)';
+    });
+});
