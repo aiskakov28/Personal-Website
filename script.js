@@ -1,5 +1,3 @@
-// script.js
-
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -45,6 +43,7 @@ window.addEventListener('scroll', () => {
             current = section.getAttribute('id');
         }
     });
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
@@ -57,6 +56,7 @@ window.addEventListener('scroll', () => {
 function highlightActiveSection() {
     const sections = document.querySelectorAll('section');
     const menuLinks = document.querySelectorAll('.menu-links a');
+
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
@@ -66,6 +66,7 @@ function highlightActiveSection() {
                 current = section.getAttribute('id');
             }
         });
+
         menuLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href').slice(1) === current) {
@@ -85,19 +86,23 @@ function init() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     renderer = new THREE.WebGLRenderer({ alpha: true });
+
     const containerWidth = document.getElementById('dataVisualization').clientWidth;
     const containerHeight = Math.min(450, containerWidth);
+
     renderer.setSize(containerWidth, containerHeight);
     document.getElementById('dataVisualization').appendChild(renderer.domElement);
 
     const geometry = new THREE.BufferGeometry();
     const vertices = [];
+
     for (let i = 0; i < 1000; i++) {
         const x = Math.random() * 2 - 1;
         const y = Math.random() * 2 - 1;
         const z = Math.random() * 2 - 1;
         vertices.push(x, y, z);
     }
+
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
     const material = new THREE.PointsMaterial({ color: 0x4a90e2, size: 0.02 });
     particles = new THREE.Points(geometry, material);
@@ -227,23 +232,37 @@ function animateProjects() {
 // Call the function when the page loads
 window.addEventListener('load', animateProjects);
 
-// Add touch event handlers for contact cards
+// Add contact card functionality
 document.querySelectorAll('.contact-card').forEach(card => {
-    card.addEventListener('touchstart', function(e) {
-        e.preventDefault();
+    let isFlipped = false;
+
+    const handleClick = function(e) {
         const frontCard = this.querySelector('.card-front');
         const backCard = this.querySelector('.card-back');
 
-        frontCard.style.transform = 'rotateY(180deg)';
-        backCard.style.transform = 'rotateY(0deg)';
-    });
+        if (!isFlipped) {
+            frontCard.style.transform = 'rotateY(180deg)';
+            backCard.style.transform = 'rotateY(0deg)';
+        } else {
+            frontCard.style.transform = 'rotateY(0deg)';
+            backCard.style.transform = 'rotateY(180deg)';
+        }
 
-    card.addEventListener('touchend', function(e) {
-        e.preventDefault();
-        const frontCard = this.querySelector('.card-front');
-        const backCard = this.querySelector('.card-back');
+        isFlipped = !isFlipped;
+    };
 
-        frontCard.style.transform = 'rotateY(0deg)';
-        backCard.style.transform = 'rotateY(180deg)';
+    // Add both click and touch events
+    card.addEventListener('click', handleClick);
+    card.addEventListener('touchend', handleClick);
+
+    // Prevent link clicks from triggering card flip
+    const links = card.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        link.addEventListener('touchend', (e) => {
+            e.stopPropagation();
+        });
     });
 });
