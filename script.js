@@ -236,9 +236,9 @@ window.addEventListener('load', animateProjects);
 document.querySelectorAll('.contact-card').forEach(card => {
     let isFlipped = false;
 
-    const handleClick = function(e) {
-        const frontCard = this.querySelector('.card-front');
-        const backCard = this.querySelector('.card-back');
+    function flipCard() {
+        const frontCard = card.querySelector('.card-front');
+        const backCard = card.querySelector('.card-back');
 
         if (!isFlipped) {
             frontCard.style.transform = 'rotateY(180deg)';
@@ -249,19 +249,15 @@ document.querySelectorAll('.contact-card').forEach(card => {
         }
 
         isFlipped = !isFlipped;
-    };
+    }
 
     // Add both click and touch events
-    card.addEventListener('click', handleClick);
-    card.addEventListener('touchend', handleClick);
+    card.addEventListener('click', flipCard);
 
-    // Prevent link clicks from triggering card flip
+    // Prevent link clicks from flipping the card
     const links = card.querySelectorAll('a');
     links.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-        link.addEventListener('touchend', (e) => {
             e.stopPropagation();
         });
     });
